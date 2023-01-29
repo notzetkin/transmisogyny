@@ -19,13 +19,17 @@ body {
        function move(id){
         var element = document.getElementById("window");
         element.style.position = "absolute";
-        element.onmousemove = function(e){
-         var x = e.pageX;
-         var y = e.pageY;
-         
-         dragValue.style.left = x + "px";
-         dragValue.style.top = y + "px";
+        element.onmousedown = function(){
+         dragValue = element;
         }
+       }
+       document.onmousemove = function(e){
+        var x = e.pageX;
+        var y = e.pageY;
+         
+        dragValue.style.left = x + "px";
+        dragValue.style.top = y + "px";
+       }
       </script>
       <div class="title-bar">
         <div class="title-bar-text">
