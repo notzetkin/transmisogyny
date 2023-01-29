@@ -16,7 +16,7 @@ body {
   <div id="outerContainer">
    <div id="container">
     <div id="window" class="window" style="margin: 32px; width: 640px">
-       <div class="title-bar">
+       <div id="title-bar" class="title-bar">
         <div class="title-bar-text">
           My First VB4 Program
         </div>
@@ -39,8 +39,8 @@ body {
   </div>
    
    <script>
-    var dragItem = document.querySelector("#window");
-    var container = document.querySelector("#container");
+    var dragItem = document.querySelector("#titlebar");
+    var container = document.querySelector("#window");
 
     var active = false;
     var currentX;
